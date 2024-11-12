@@ -53,13 +53,21 @@
 #     return "Antonina not found"
 
 # Problem 6
-def concat_strings(*args, sep=' '):
-    return sep.join(args)
-    # new_string = ''
-    # for string in args:
-    #     new_string += (string + sep)
+# def concat_strings(*args, sep=' '):
+#     return sep.join(args)
+#     # new_string = ''
+#     # for string in args:
+#     #     new_string += (string + sep)
     
-    # return new_string
+#     # return new_string
 
-print(concat_strings("Hello", "world!"))              # Hello world!
-print(concat_strings("one", "two", "three", sep='+')) # one+two+three
+# print(concat_strings("Hello", "world!"))              # Hello world!
+# print(concat_strings("one", "two", "three", sep='+')) # one+two+three
+
+# Problem 7
+# def register(username, /, age=None, *, password):
+#     return {'username': username, 'password': password, 'age': age}
+
+# Problem 8
+def print_message(*, message, level = "INFO"):
+    print(f"[{level}] {message}")
