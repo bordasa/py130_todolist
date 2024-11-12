@@ -33,15 +33,33 @@
 # print(calculate_average())
 
 # Problem 5
-def find_person(**kwargs):
-    for name, profession in kwargs.items():
-        if name == 'Antonina':
-            return f"{name} has the profession of {profession}."
+# def find_person(**kwargs):
+#     for name, profession in kwargs.items():
+#         if name == 'Antonina':
+#             return f"{name} has the profession of {profession}."
     
-    return "Antonina not found"
+#     return "Antonina not found"
 
-print(find_person(John="Engineer", Antonina="Software Engineer"))
-# Antonina's profession is Software Engineer
+# print(find_person(John="Engineer", Antonina="Software Engineer"))
+# # Antonina's profession is Software Engineer
 
-print(find_person(John="Engineer", Ginni="Software Engineer"))
-# Antonina not found
+# print(find_person(John="Engineer", Ginni="Software Engineer"))
+# # Antonina not found
+
+# def find_person(**kwargs):
+#     if 'Antonina' in kwargs:
+#         return f"Antonina is a {kwargs['Antonina']}."
+
+#     return "Antonina not found"
+
+# Problem 6
+def concat_strings(*args, sep=' '):
+    return sep.join(args)
+    # new_string = ''
+    # for string in args:
+    #     new_string += (string + sep)
+    
+    # return new_string
+
+print(concat_strings("Hello", "world!"))              # Hello world!
+print(concat_strings("one", "two", "three", sep='+')) # one+two+three
