@@ -50,11 +50,45 @@
 
 # print(new_str)
 
-# Problem 7:
-nested_list = [[1, 2], [3, 4, 5], [6], []]
+# # Problem 7:
+# nested_list = [[1, 2], [3, 4, 5], [6], []]
 
-flat_list = list((num
-                    for sublist in nested_list
-                    for num in sublist))
+# flat_list = list((num
+#                     for sublist in nested_list
+#                     for num in sublist))
 
-print(flat_list)
+# print(flat_list)
+
+# # Problem 8:
+# Reverse String
+
+# my_string = 'Launch School'
+
+# string_reversed = (my_string[i] for i in range(len(my_string)-1, -1, -1))
+
+# print(list(string_reversed))
+
+# Problem 9
+# Basic Generator Function
+
+# def generator5():
+#     for num in range(1, 6):
+#         yield num
+
+# for num in generator5():
+#     print(num)
+
+# Problem 10
+# Generator with User Input
+
+# def user_input_generator():
+#     while True:
+#         user_input = input("Please type anything you want or 'stop'.\n")
+
+#         if user_input.lower() == 'stop':
+#             break
+
+#         yield user_input
+
+# for _ in user_input_generator():
+#     print(_)
