@@ -86,5 +86,58 @@ class TestTodoList(unittest.TestCase):
         
         self.assertEqual([self.todo1, self.todo3], self.todos.to_list())
 
+    def test_str(self):
+        expected_str = (
+            "----- Today's Todos -----\n"
+            "[ ] Buy milk\n"
+            "[ ] Clean room\n"
+            "[ ] Go to the gym"
+        )
+
+        self.assertEqual(expected_str, str(self.todos))
+
+    def test_str_done_todo(self):
+        expected_str = (
+            "----- Today's Todos -----\n"
+            "[ ] Buy milk\n"
+            "[X] Clean room\n"
+            "[ ] Go to the gym"
+        )
+
+        self.todos.mark_done_at(1)
+        self.assertEqual(expected_str, str(self.todos))
+    
+    def test_str_all_done_todos(self):
+        expected_str = (
+            "----- Today's Todos -----\n"
+            "[X] Buy milk\n"
+            "[X] Clean room\n"
+            "[X] Go to the gym"
+        )
+
+        self.todos.mark_all_done()
+        self.assertEqual(expected_str, str(self.todos))
+    
+    def test_each(self):
+        def add_exclamation(todo):
+            todo._title += "!"
+        
+        self.todos.each(add_exclamation)
+
+        self.assertEqual(self.todo1._title[-1], "!")
+        self.assertEqual(self.todo2._title[-1], "!")
+        self.assertEqual(self.todo3._title[-1], "!")
+
+    def test_select(self):
+        empty_Todo_list = self.todos.select(lambda todo: todo.done)
+        full_Todo_list = self.todos.select(lambda todo: not todo.done)
+        
+        self.todo2.done = True
+        one_item_Todo_list = self.todos.select(lambda todo: todo.done)
+
+        self.assertEqual(0, len(empty_Todo_list))
+        self.assertEqual(3, len(full_Todo_list))
+        self.assertEqual(1, len(one_item_Todo_list))
+
 if __name__ == "__main__":
     unittest.main()
