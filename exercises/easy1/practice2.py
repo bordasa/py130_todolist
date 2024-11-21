@@ -16,7 +16,7 @@
 
 def user_input_generator():
     while True:
-        user_input = input("Type anything except 'stop'\n")
+        user_input = input("Type anything except 'stop':\n")
 
         if user_input.lower() == 'stop':
             break
