@@ -1,0 +1,11 @@
+LICENSE
+README.md
+pyproject.toml
+src/todolist_abordas/__init__.py
+src/todolist_abordas/todo_class.py
+src/todolist_abordas/todo_list.py
+src/todolist_abordas.egg-info/PKG-INFO
+src/todolist_abordas.egg-info/SOURCES.txt
+src/todolist_abordas.egg-info/dependency_links.txt
+src/todolist_abordas.egg-info/top_level.txt
+tests/test_todolist.py

@@ -1,0 +1,13 @@
+Metadata-Version: 2.1
+Name: todolist_abordas
+Version: 0.1.0
+Summary: A fantastic todo list application.
+Author-email: Alexei Bordas <alexei.bordas@gmail.com>
+Project-URL: Homepage, https://github.com/bordasa/todolist
+Project-URL: Issues, https://github.com/bordasa/todolist/issues
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Requires-Python: >=3.8
+Description-Content-Type: text/markdown
+License-File: LICENSE
